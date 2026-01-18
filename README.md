@@ -10,21 +10,37 @@
 Скрипт лежит в корне проекта с именим clean_old_logs.sh
 ## Задание B2
 сохранение текущей ветки 
+
 git stash push -m "не исправленный баг"
-#Переключение на ветку main
+
+Переключение на ветку main
+
 git switch main
+
  после исправления бага , добавляем все измененные файлы в staging area 
+ 
 git add .
+
 создание коммита , с исправлением бага в ветке main
+
 git commit -m "исправление  бага на проде"
+
 отправление исправления в репозиторий
+
 git push origin main
+
 переключение на ветку текущей разработки
+
 git checkout feature/junior-task
+
 восстановление сохраненных изменений из stash
+
 git stash pop
+
 переименование запушенного комита
+
 git commit --amend -m "feat(junior-task): "исправление бага в ветке main 2.0"
+
 git push --force-with-lease origin feature/junior-task
 
 ## Задание B3
